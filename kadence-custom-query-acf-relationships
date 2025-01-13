@@ -8,7 +8,8 @@ add_filter( 'kadence_blocks_pro_query_loop_query_vars', function( $query, $ql_qu
 		global $post; // Ensure access to current post data being viewed.
 
 		// Two options are provided below. Option 1 is for bi-directional relationships or when the relationship
-		// is set on the child or related post. Only one option should be commented out or kept in your final code.
+		// is set on the child or related post. Option 2 is for when the relationship is only set on the
+		// parent/primary post. Only one option should be commented out or kept in your final code.
 
 		// ----------
 
