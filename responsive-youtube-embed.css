@@ -1,0 +1,11 @@
+/* Ran into issue where privacy consent prompt was delaying Youtube embeds from loading which, for some reason, caused the embed not to be responsive. This CSS hack fixed the issue. */
+
+/* Responsive YouTube Embed */
+
+.uc-embedding-container,
+iframe[title="YouTube video player"] {
+	width: 100% !important;
+	height: auto !important;
+	max-height: unset !important;
+	aspect-ratio: 16/9 !important;
+}
