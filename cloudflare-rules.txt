@@ -32,7 +32,7 @@ Action: Managed Challenge
 
 Challenge Path / VPN Managed Challenge
 
-(ip.src.asnum in {60068 9009 16247 51332 212238 131199 22298 29761 62639 206150 210277 46562 8100 3214 206092 206074 206164 213074}) or (http.request.uri.path contains "wp-login")
+(ip.src.asnum in {60068 9009 16247 51332 212238 131199 22298 29761 62639 206150 210277 46562 8100 3214 206092 206074 206164 213074}) or (http.request.uri.path contains "wp-login" and not http.request.uri.query contains "cfbypass")
 
 Action: Managed Challenge
 
