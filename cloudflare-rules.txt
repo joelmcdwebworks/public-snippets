@@ -6,7 +6,7 @@ Based on: https://webagencyhero.com/cloudflare-waf-rules-v3/
 
 Allow Good Bots / Services
 
-(cf.verified_bot_category in {"Search Engine Crawler" "Search Engine Optimization" "Monitoring & Analytics" "Advertising & Marketing" "Page Preview" "Academic Research" "Security" "Accessibility" "Webhooks" "Feed Fetcher"}) or (http.user_agent contains "letsencrypt" and http.request.uri.path contains "acme-challenge") or (ip.src in {54.209.79.175 54.80.47.193 54.161.178.114 44.209.150.16 44.210.162.163 35.170.163.230 44.196.246.20 3.94.51.90}) or (http.user_agent contains "Better Uptime Bot Mozilla")
+(cf.verified_bot_category in {"Search Engine Crawler" "Search Engine Optimization" "Monitoring & Analytics" "Advertising & Marketing" "Page Preview" "Academic Research" "Security" "Accessibility" "Webhooks" "Feed Fetcher"}) or (http.user_agent contains "letsencrypt" and http.request.uri.path contains "acme-challenge") or (ip.src in {54.209.79.175 54.80.47.193 54.161.178.114 44.209.150.16 44.210.162.163 35.170.163.230 44.196.246.20 3.94.51.90}) or (http.user_agent contains "Better Uptime Bot Mozilla") or (http.user_agent eq "Mailerlite/2.0") or (http.request.uri.path contains "/feed/")
 
 [] Add OR and then add server IP to whitelist.
 
